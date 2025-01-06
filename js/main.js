@@ -1,4 +1,4 @@
-console.log("Скрипт ззагружен!")
+console.log("Скрипт загружен!");
 const jsonUrl = './data/data.json';  // Путь к файлу data.json в той же папке
 
 fetch(jsonUrl)
@@ -17,7 +17,13 @@ fetch(jsonUrl)
             
             const name = document.createElement('h2');
             name.classList.add('movie-name');
-            name.textContent = item.name;
+            
+            // Создаем ссылку на страницу фильма
+            const link = document.createElement('a');
+            link.href = `html/movie.html?id=${item.id}`;  // Путь к странице фильма
+            link.textContent = item.name;  // Название фильма
+            name.appendChild(link);  // Добавляем ссылку в название
+            
             movieDiv.appendChild(name);
 
             const description = document.createElement('p');
