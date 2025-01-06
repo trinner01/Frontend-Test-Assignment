@@ -13,3 +13,8 @@
     border: none;
     height: 65px;
 }
+a{
+    text-decoration: none;
+    color: white;
+    background: none;
+}
