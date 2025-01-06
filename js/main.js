@@ -22,7 +22,7 @@ fetch(jsonUrl)
             const link = document.createElement('a');
             link.href = `html/movie.html?id=${item.id}`;  // Путь к странице фильма
             link.textContent = item.name;  // Название фильма
-            name.appendChild(link);  // Добавляем ссылку в название
+            name.appendChild(link);
             
             movieDiv.appendChild(name);
 
