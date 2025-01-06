@@ -1,6 +1,6 @@
 .movie-list {
     display: flex;
-    flex-wrap: wrap;  /* Перенос карточек на следующую строку */
+    flex-wrap: wrap;
     gap: 20px;
     padding-top: 25px;
     justify-content: center;
@@ -26,7 +26,7 @@
 
 .movie-poster {
     order: 1;;
-    max-width: 100%;  /* Постер будет занимать всю ширину карточки */
+    max-width: 100%;
     margin-bottom: 10px;
 }
 
