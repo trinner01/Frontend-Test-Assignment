@@ -1,8 +1,16 @@
 *{
     background-color: #292c31;
+    overflow: hidden
 }
-.title{
+.table{
+    column-count: 2;
+    column-gap: 1500px;
+    color: white;
     font-weight: bolder;
-    color: #fdfdfd;
-    margin-left: 40px;
+}
+.table h5{
+    padding-top: 8px;
+}
+.table p{
+    padding-left: 25px;
 }
