@@ -1,45 +1,35 @@
-console.log("Скрипт для movie.html загружен!");
+console.log("Скрипт страницы фильма загружен!");
 
-const jsonUrl = '../data/data.json'; // Путь к файлу data.json
-const movieDetailsContainer = document.querySelector('.movie-details');
+// Получаем id из URL
+const urlParams = new URLSearchParams(window.location.search);
+const movieId = urlParams.get('id');
 
-// Функция для получения параметра id из URL
-function getMovieIdFromUrl() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('id');
-}
+// Путь к файлу data.json
+const jsonUrl = '../data/data.json';
 
-// Загружаем фильм
 fetch(jsonUrl)
     .then(response => {
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            console.error('Ошибка загрузки данных:', response.status);
+            throw new Error('Ошибка загрузки данных');
         }
         return response.json();
     })
     .then(data => {
-        const movieId = getMovieIdFromUrl(); // Получаем id фильма из URL
-        const movie = data.items.find(item => item.id == movieId); // Находим фильм по id
-
-        if (!movie) {
-            movieDetailsContainer.innerHTML = '<p>Фильм не найден.</p>';
-            return;
+        const movie = data.items.find(item => item.id == movieId);
+        
+        if (movie) {
+            // Заполняем страницу данными о фильме
+            document.getElementById('movie-name').textContent = movie.name;
+            document.getElementById('movie-description').textContent = movie.description;
+            document.getElementById('movie-actors').textContent = `Actors: ${movie.actors || 'Unknown'}`;
+            document.getElementById('movie-trivia').textContent = `Trivia: ${movie.trivia || 'No trivia available'}`;
+            document.getElementById('movie-poster').src = movie.poster;
+            document.getElementById('movie-poster').alt = movie.name;
+        } else {
+            console.error('Movie not found!');
         }
-
-        // Создаём HTML для фильма
-        const movieHtml = `
-            <h1>${movie.name}</h1>
-            <img src="${movie.poster}" alt="${movie.name}" class="movie-poster">
-            <p class="movie-description">${movie.description}</p>
-            <p><strong>Жанр:</strong> ${movie.genre}</p>
-            <p><strong>Длительность:</strong> ${movie.duration}</p>
-            <p><strong>Рейтинг:</strong> ${movie.rating}</p>
-        `;
-
-        // Добавляем фильм в контейнер
-        movieDetailsContainer.innerHTML = movieHtml;
     })
     .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-        movieDetailsContainer.innerHTML = '<p>Ошибка загрузки данных о фильме.</p>';
+        console.error('Ошибка:', error);
     });

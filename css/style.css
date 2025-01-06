@@ -1,4 +1,4 @@
-*{
+*{;
     background: #0C0C0C;
     max-height: max-content;
 }
@@ -12,8 +12,4 @@
     width: 100%; 
     border: none;
     height: 65px;
-}
-a{
-    text-decoration: none;
-    color: white;
 }

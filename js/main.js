@@ -1,6 +1,5 @@
-console.log("Скрипт загружен!");
-
-const jsonUrl = './data/data.json'; // Путь к файлу data.json в той же папке
+console.log("Скрипт ззагружен!")
+const jsonUrl = './data/data.json';  // Путь к файлу data.json в той же папке
 
 fetch(jsonUrl)
     .then(response => {
@@ -16,31 +15,25 @@ fetch(jsonUrl)
             const movieDiv = document.createElement('div');
             movieDiv.classList.add('movie');
             
-            // Создаём ссылку на фильм
-            const movieLink = document.createElement('a');
-            movieLink.href = `/html/movie.html?id=${item.id}`; // Формируем ссылку с параметром id
-            movieLink.classList.add('movie-link');
-
             const name = document.createElement('h2');
             name.classList.add('movie-name');
             name.textContent = item.name;
-            movieLink.appendChild(name);
+            movieDiv.appendChild(name);
+
+            const description = document.createElement('p');
+            description.classList.add('movie-description');
+            description.textContent = item.description;
+            movieDiv.appendChild(description);
 
             const poster = document.createElement('img');
             poster.classList.add('movie-poster');
             poster.src = item.poster;
             poster.alt = item.name;
-            movieLink.appendChild(poster);
+            movieDiv.appendChild(poster);
 
-            const description = document.createElement('p');
-            description.classList.add('movie-description');
-            description.textContent = item.description;
-            movieLink.appendChild(description);
-
-            movieDiv.appendChild(movieLink);
             movieList.appendChild(movieDiv);
         });
     })
     .catch(error => {
-        console.error('There was a проблема with the fetch operation:', error);
+        console.error('There was a problem with the fetch operation:', error);
     });

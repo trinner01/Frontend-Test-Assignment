@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Details</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Movie Page</title>
+    <link rel="stylesheet" href="../css/movie.css">
 </head>
+
 <body>
-    <iframe src="header.html" class="header"></iframe>
+    <iframe src="../html/header.html" class="header"></iframe>
 
     <div class="movie-details">
-        <!-- Данные фильма будут добавлены сюда через JS -->
+        <h1 id="movie-name"></h1>
+        <img id="movie-poster" alt="Poster">
+        <p id="movie-description"></p>
+        <p id="movie-actors"></p>
+        <p id="movie-trivia"></p>
     </div>
 
-    <iframe src="footer.html" class="footer"></iframe>
+    <iframe src="../html/footer.html" class="footer"></iframe>
+
     <script src="../js/movie.js"></script>
 </body>
 </html>

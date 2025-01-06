@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
 }
 
 .movie-list .movie {
@@ -36,12 +36,7 @@
     column-count: 4;
     padding-top: 25px;
 }
-.movie-list .movie .movie-link{
-    background: none;
-}
-.movie-list .movie .movie-link .movie-name{
-    background: none;
-}
-.movie-list .movie .movie-link .movie-description{
+
+.movie-name, .movie-description {
     background: none;
 }
