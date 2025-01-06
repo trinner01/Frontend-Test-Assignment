@@ -1,5 +1,5 @@
 console.log("Скрипт ззагружен!")
-const jsonUrl = '/data/data.json';  // Путь к файлу data.json в той же папке
+const jsonUrl = './data/data.json';  // Путь к файлу data.json в той же папке
 
 fetch(jsonUrl)
     .then(response => {
