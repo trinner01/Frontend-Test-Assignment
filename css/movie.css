@@ -1,42 +1,44 @@
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;  /* Перенос карточек на следующую строку */
+    gap: 20px;  /* Интервал между карточками */
+    padding-top: 25px;
+    justify-content: center;  /* Выравнивание по центру */
+    color: white;
+    font-weight: bolder;
+}
+
 .movie {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-}
-
-.movie-list .movie {
     border-radius: 10px;
     background: #292D32;
     padding: 10px;
+    width: calc(25% - 20px);  /* Задаем ширину 25%, минус интервал между карточками */
+    box-sizing: border-box;  /* Учитываем padding и margin в расчете ширины */
+    transition: transform 0.3s ease-in-out;  /* Добавляем плавный эффект при наведении */
+}
+
+.movie:hover {
+    transform: scale(1.05);  /* Увеличиваем карточку при наведении */
 }
 
 .movie-poster {
-    order: 1; /* Постер будет первым */
-    max-width: 200px;
+    order: 1;;
+    max-width: 100%;  /* Постер будет занимать всю ширину карточки */
     margin-bottom: 10px;
 }
 
 .movie-name {
-    order: 2; /* Название будет вторым */
-    font-size: 25px;
+    order: 2;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 
 .movie-description {
-    order: 3; /* Описание будет третьим */
-    font-size: 10px;
+    order: 3;
+    font-size: 12px;
     text-align: left;
-    max-width: 200px;
-}
-
-.movie-list {
-    color: white;
-    font-weight: bolder;
-    column-count: 4;
-    padding-top: 25px;
-}
-
-.movie-name, .movie-description {
-    background: none;
+    max-width: 180px;
 }
