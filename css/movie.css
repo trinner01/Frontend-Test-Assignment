@@ -51,3 +51,11 @@
 a{
     background: none;
 }
+
+.movie-details{
+    color: white;
+    font-weight: bolder;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 350px;
+}
