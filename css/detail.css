@@ -1,0 +1,13 @@
+.movie-details{
+    color: white;
+    font-weight: bolder;
+    padding: 20px;
+    height: 800px;
+    column-count: 2;
+}
+
+.movie-poster {
+    max-width: 300px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}

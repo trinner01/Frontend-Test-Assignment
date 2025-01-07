@@ -1,5 +1,5 @@
 console.log("Скрипт загружен!");
-const jsonUrl = './data/data.json';  // Путь к файлу data.json в той же папке
+const jsonUrl = './data/data.json'; // Путь к файлу data.json в той же папке
 
 fetch(jsonUrl)
     .then(response => {
@@ -20,10 +20,9 @@ fetch(jsonUrl)
             
             // Создаем ссылку на страницу фильма
             const link = document.createElement('a');
-            link.href = `html/movie.html?id=${item.id}`;  // Путь к странице фильма
-            link.textContent = item.name;  // Название фильма
+            link.href = `html/movie.html?id=${item.id}`; // Путь к странице фильма
+            link.textContent = item.name; // Название фильма
             name.appendChild(link);
-            
             movieDiv.appendChild(name);
 
             const description = document.createElement('p');
@@ -37,6 +36,27 @@ fetch(jsonUrl)
             poster.alt = item.name;
             movieDiv.appendChild(poster);
 
+            // Добавляем блок с информацией о фильме
+            const infoDiv = document.createElement('div');
+            infoDiv.classList.add('movie-info');
+
+            const rating = document.createElement('div');
+            rating.classList.add('rating');
+            rating.textContent = `⭐ ${item.rating.toFixed(1)}`;
+
+            const genre = document.createElement('div');
+            genre.classList.add('genre');
+            genre.textContent = `Жанр: ${item.genre}`;
+
+            const duration = document.createElement('div');
+            duration.classList.add('duration');
+            duration.textContent = `⏱ ${item.duration} мин`;
+
+            infoDiv.appendChild(rating);
+            infoDiv.appendChild(genre);
+            infoDiv.appendChild(duration);
+
+            movieDiv.appendChild(infoDiv);
             movieList.appendChild(movieDiv);
         });
     })

@@ -17,3 +17,68 @@ a{
     text-decoration: none;
     color: white;
 }
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.movie {
+    background-color: #292D32;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-poster {
+    border-radius: 10px;
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+}
+
+.movie-name {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.movie-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.movie-info div {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.movie-info .rating {
+    background-color: #1abc9c;
+}
+
+.movie-info .genre {
+    background-color: #3498db;
+}
+
+.movie-info .duration {
+    background-color: #9b59b6;
+}
