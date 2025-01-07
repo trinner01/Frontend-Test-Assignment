@@ -32,9 +32,9 @@ if (!movieId) {
             document.querySelector(".movie-poster").alt = movie.name;
             document.querySelector(".movie-name").textContent = movie.name;
             document.querySelector(".movie-description").textContent = movie.description;
-            document.querySelector(".movie-duration").textContent = `Duration: ${movie.duration}`;
-            document.querySelector(".movie-rating").textContent = `Rating: ${movie.rating}`;
-            document.querySelector(".movie-genre").textContent = `Genre: ${movie.genre}`;
+            document.querySelector(".movie-duration").textContent = `⏱: ${movie.duration}`;
+            document.querySelector(".movie-rating").textContent = `☆: ${movie.rating}`;
+            document.querySelector(".movie-genre").textContent = `🎞: ${movie.genre}`;
 
             // Trivia
             const triviaList = document.querySelector(".movie-trivia");

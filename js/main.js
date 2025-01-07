@@ -1,5 +1,8 @@
 console.log("Скрипт загружен!");
 const jsonUrl = './data/data.json'; // Путь к файлу data.json в той же папке
+const ratingImg = document.createElement('img')
+
+
 
 fetch(jsonUrl)
     .then(response => {
@@ -42,15 +45,15 @@ fetch(jsonUrl)
 
             const rating = document.createElement('div');
             rating.classList.add('rating');
-            rating.textContent = `⭐ ${item.rating.toFixed(1)}`;
+            rating.textContent = `☆ ${item.rating.toFixed(1)}`;
 
             const genre = document.createElement('div');
             genre.classList.add('genre');
-            genre.textContent = `Жанр: ${item.genre}`;
+            genre.textContent = `🎞: ${item.genre}`;
 
             const duration = document.createElement('div');
             duration.classList.add('duration');
-            duration.textContent = `⏱ ${item.duration} мин`;
+            duration.textContent = `⏱ ${item.duration}`;
 
             infoDiv.appendChild(rating);
             infoDiv.appendChild(genre);
