@@ -91,3 +91,9 @@
 .desc ul{
     padding-left: 24px;
 }
+
+@media(max-width: 558px){
+    .desc{
+        padding-left: 0;
+    }
+}

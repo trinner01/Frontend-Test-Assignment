@@ -30,3 +30,12 @@
 .left, .right{
     display: inline-block;
 }
+
+@media(max-width: 1355px){
+.left{
+    width: 70%;
+}
+.right{
+    width: 30%;
+}
+}
