@@ -47,6 +47,14 @@ fetch(jsonUrl)
             rating.classList.add('rating');
             rating.textContent = `☆ ${item.rating.toFixed(1)}`;
 
+            if(item.rating < 2.0){
+                rating.style.backgroundColor = "#eb160f"
+            }else if(item.rating < 7.0){
+                rating.style.backgroundColor = "#752dff"
+            }else{
+                rating.style.backgroundColor = "#009e53"
+            }
+
             const genre = document.createElement('div');
             genre.classList.add('genre');
             genre.textContent = `🎞: ${item.genre}`;
@@ -61,6 +69,7 @@ fetch(jsonUrl)
 
             movieDiv.appendChild(infoDiv);
             movieList.appendChild(movieDiv);
+
         });
     })
     .catch(error => {

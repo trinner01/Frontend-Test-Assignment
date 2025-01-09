@@ -27,14 +27,26 @@ if (!movieId) {
                 return;
             }
 
+            const ratingMov = movie.rating.toFixed(1);
+
             // Отображаем данные фильма
             document.querySelector(".movie-poster").src = movie.poster;
             document.querySelector(".movie-poster").alt = movie.name;
             document.querySelector(".movie-name").textContent = movie.name;
             document.querySelector(".movie-description").textContent = movie.description;
             document.querySelector(".movie-duration").textContent = `⏱: ${movie.duration}`;
-            document.querySelector(".movie-rating").textContent = `☆: ${movie.rating}`;
+            document.querySelector(".movie-rating").textContent = `☆: ${ratingMov}`;
             document.querySelector(".movie-genre").textContent = `🎞: ${movie.genre}`;
+
+            const movieRating = document.querySelector(".movie-rating");
+
+            if(movie.rating < 2.0){
+                movieRating.style.backgroundColor = "#eb160f"
+            }else if(movie.rating < 7.0){
+                movieRating.style.backgroundColor = "#752dff"
+            }else{
+                movieRating.style.backgroundColor = "#009e53"
+            }
 
             // Trivia
             const triviaList = document.querySelector(".movie-trivia");

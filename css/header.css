@@ -3,6 +3,9 @@
 }
 .title{
     font-weight: bolder;
-    color: #fdfdfd;
     padding-left: 25px;
+}
+.header-link{
+    text-decoration: none;
+    color: #fdfdfd;
 }
