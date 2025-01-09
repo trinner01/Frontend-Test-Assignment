@@ -1,6 +1,7 @@
 *{
     background-color: #292c31;
-    overflow: hidden
+    overflow: hidden;
+    font-family: 'helvetica';
 }
 .table{
     column-count: 2;
@@ -13,4 +14,8 @@
 }
 .table p{
     padding-left: 25px;
+}
+
+.table a{
+    color: white;
 }

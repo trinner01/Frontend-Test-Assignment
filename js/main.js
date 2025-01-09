@@ -21,6 +21,14 @@ fetch(jsonUrl)
             const name = document.createElement('h2');
             name.classList.add('movie-name');
             
+            
+
+            const poster = document.createElement('img');
+            poster.classList.add('movie-poster');
+            poster.src = item.poster;
+            poster.alt = item.name;
+            movieDiv.appendChild(poster);
+
             // Создаем ссылку на страницу фильма
             const link = document.createElement('a');
             link.href = `html/movie.html?id=${item.id}`; // Путь к странице фильма
@@ -33,12 +41,7 @@ fetch(jsonUrl)
             description.textContent = item.description;
             movieDiv.appendChild(description);
 
-            const poster = document.createElement('img');
-            poster.classList.add('movie-poster');
-            poster.src = item.poster;
-            poster.alt = item.name;
-            movieDiv.appendChild(poster);
-
+            
             // Добавляем блок с информацией о фильме
             const infoDiv = document.createElement('div');
             infoDiv.classList.add('movie-info');

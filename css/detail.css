@@ -1,3 +1,10 @@
+*{
+    background: #0C0C0C;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .movie-details {
     display: flex;
     flex-wrap: wrap;
@@ -18,15 +25,26 @@
 }
 
 .desc{
+    margin-top: 10px;
     flex: 1;
-    max-width: 600px;
+    max-width: 800px;
+    padding-left: 100px;
 }
 
+.desc .movie-description-title, h2, .movie-name{
+    font-size: 30px;
+}
 .movie-description {
     font-size: 12px;
     text-align: left;
-    max-width: 180px;
+    max-width: auto;
 }
+
+.movie-details .movie-description, .movie-trivia, .movie-actors{
+    font-weight: lighter;
+    padding-top: 20px;
+}
+
 
 .movie-info {
     display: flex;
@@ -56,4 +74,20 @@
 }
 .movie-name{
     width: max-content;
+}
+
+.movie-details {
+    flex-grow: 1;
+}
+
+.movie-actors{
+    text-decoration: underline;
+}
+
+.desc h2{
+    padding-top: 10px;
+}
+
+.desc ul{
+    padding-left: 24px;
 }
