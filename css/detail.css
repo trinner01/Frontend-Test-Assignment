@@ -41,6 +41,7 @@
 }
 
 .movie-details .movie-description, .movie-trivia, .movie-actors{
+    font-size: 15px;
     font-weight: lighter;
     padding-top: 20px;
 }
