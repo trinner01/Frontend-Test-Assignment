@@ -132,7 +132,7 @@
             "description": "Exercitation id occaecat et occaecat duis dolore eu non sint et. Ad Lorem duis aute culpa. Fugiat aliquip exercitation ullamco mollit sunt excepteur occaecat ea laboris do nisi exercitation ex ipsum.",
             "duration": "2:42",
             "rating": 4.1912,
-            "poster": "../img/15.jpg",
+            "poster": "./img/15.jpg",
             "genre": "Action"
         },
         {
@@ -141,7 +141,7 @@
             "description": "Pariatur nulla officia magna dolor culpa ut. Consectetur duis dolore elit ea ut fugiat ad aute nisi. Proident ullamco Lorem deserunt laboris anim duis.",
             "duration": "3:18",
             "rating": 7.341,
-            "poster": "../img/16.jpg",
+            "poster": "./img/16.jpg",
             "genre": "Action"
         }
     ]
