@@ -1,21 +1,32 @@
 *{
     background-color: #292c31;
-    overflow: hidden;
     font-family: 'helvetica';
+    height: 10px;
+    padding: 0%;
+    margin: 0%;
 }
 .table{
-    column-count: 2;
-    column-gap: 1500px;
+    flex-wrap: wrap;
     color: white;
     font-weight: bolder;
-}
-.table h5{
     padding-top: 8px;
-}
-.table p{
     padding-left: 25px;
 }
 
 .table a{
     color: white;
+}
+
+.left{
+    padding-top: 15px;
+    width: 85%;
+}
+.right{
+    padding-top: 10px;
+    text-align: left;
+    float: right;
+    width: 15%;
+}
+.left, .right{
+    display: inline-block;
 }
